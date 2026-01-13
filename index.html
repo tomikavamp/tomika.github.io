@@ -2,9 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>tomika.net</title>
+  <title>tomika</title>
 
-  <!-- ESTILOS (CSS) -->
   <style>
     @font-face {
       font-family: 'MiltonOne';
@@ -12,76 +11,59 @@
       font-weight: normal;
     }
 
-    @font-face {
-      font-family: 'MiltonOne';
-      src: url('fonts/Milton_One_Bold.otf') format('opentype');
-      font-weight: bold;
-    }
-
     body {
       margin: 0;
-      background: #0b0b0b;
+      background: #0a0a0a;
       color: #eaeaea;
       font-family: Arial, sans-serif;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
     }
 
     h1 {
       font-family: 'MiltonOne', serif;
-      font-size: 3rem;
-      letter-spacing: 6px;
-      margin-bottom: 10px;
+      font-size: 4rem;
+      letter-spacing: 8px;
+      transform: skew(-6deg);
+      margin-bottom: 25px;
     }
 
     .divider {
-      width: 120px;
+      width: 140px;
       height: 2px;
-      background: #555;
-      margin: 20px 0;
+      background: #444;
+      margin-bottom: 35px;
     }
 
     .buttons {
       display: flex;
-      gap: 20px;
+      gap: 22px;
     }
 
     .btn {
       text-decoration: none;
       color: #eaeaea;
       border: 1px solid #555;
-      padding: 12px 18px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
+      padding: 12px 20px;
+      border-radius: 10px;
       font-size: 0.9rem;
+      transition: all 0.25s ease;
     }
 
     .btn:hover {
-      transform: scale(1.08);
+      transform: translateY(-4px);
+      border-color: #aaa;
       background: #111;
-      border-color: #999;
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 30px;
-      display: flex;
-      gap: 15px;
-    }
-
-    .small-btn {
-      font-size: 0.75rem;
-      padding: 8px 12px;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>tomika.net</h1>
+  <h1>tomika</h1>
 
   <div class="divider"></div>
 
@@ -90,18 +72,6 @@
     <a class="btn" href="https://x.com/TomikaAkaStr1ke" target="_blank">X</a>
     <a class="btn" href="https://github.com/tomikavamp" target="_blank">GitHub</a>
   </div>
-
-  <div class="footer">
-    <a class="btn small-btn" href="https://steamcommunity.com/id/tomikavamp/" target="_blank">Steam</a>
-    <span class="btn small-btn" onclick="copyDiscord()">Discord</span>
-  </div>
-
-  <script>
-    function copyDiscord() {
-      navigator.clipboard.writeText("tom1kat");
-      alert("✨ username copied");
-    }
-  </script>
 
 </body>
 </html>
