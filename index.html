@@ -13,6 +13,8 @@
       background: radial-gradient(circle at top, #111, #000);
       color: whitesmoke;
       font-family: "Inter", sans-serif;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -31,7 +33,7 @@
     }
 
     main {
-      height: calc(100vh - 160px);
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -59,13 +61,54 @@
       background: #111;
       opacity: 1;
     }
+
+    footer {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px;
+      position: relative;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #aaa;
+      border: 1px solid #222;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-size: 0.75rem;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    footer a:hover {
+      opacity: 1;
+      color: whitesmoke;
+      border-color: #444;
+      background: #0e0e0e;
+    }
+
+    /* mensaje fancy */
+    .toast {
+      position: absolute;
+      bottom: 55px;
+      font-size: 0.75rem;
+      opacity: 0;
+      color: #bbb;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+    }
   </style>
 </head>
 
 <body>
 
   <header>tomika.net</header>
-
   <div class="divider"></div>
 
   <main>
@@ -75,6 +118,24 @@
       <a href="https://github.com/tomikavamp" target="_blank">GitHub</a>
     </div>
   </main>
+
+  <footer>
+    <a href="https://steamcommunity.com/id/tomikavamp/" target="_blank">Steam</a>
+    <a onclick="copyDiscord()">Discord</a>
+    <div id="toast" class="toast">username copied ✦</div>
+  </footer>
+
+  <script>
+    function copyDiscord() {
+      navigator.clipboard.writeText("tom1kat");
+      const toast = document.getElementById("toast");
+      toast.classList.add("show");
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 1800);
+    }
+  </script>
 
 </body>
 </html>
