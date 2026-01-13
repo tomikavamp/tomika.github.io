@@ -41,7 +41,7 @@
     .buttons {
       display: flex;
       gap: 22px;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
 
     .btn {
@@ -60,6 +60,31 @@
       transform: translateY(-4px);
       border-color: #aaa;
       background: #111;
+    }
+
+    .video-container {
+      width: 360px;
+      margin: 10px 0 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 12px;
+      opacity: 0.85;
+      cursor: pointer;
+    }
+
+    .volume {
+      width: 120px;
+    }
+
+    .volume input[type="range"] {
+      width: 100%;
+      cursor: pointer;
     }
 
     .footer {
@@ -93,12 +118,41 @@
     <a class="btn" href="https://github.com/tomikavamp" target="_blank">GitHub</a>
   </div>
 
+  <!-- VIDEO -->
+  <div class="video-container">
+    <video id="traquizaVideo" autoplay loop playsinline onclick="toggleVideo()">
+      <source src="video/traquiza.mp4" type="video/mp4">
+    </video>
+
+    <div class="volume">
+      <input
+        type="range"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.3"
+        oninput="setVolume(this.value)"
+      >
+    </div>
+  </div>
+
   <div class="footer">
     <a class="btn small-btn" href="https://steamcommunity.com/id/tomikavamp/" target="_blank">Steam</a>
     <button class="btn small-btn" onclick="copyDiscord()">Discord</button>
   </div>
 
   <script>
+    const video = document.getElementById("traquizaVideo");
+
+    function toggleVideo() {
+      video.paused ? video.play() : video.pause();
+    }
+
+    function setVolume(value) {
+      video.volume = value;
+      video.muted = value == 0;
+    }
+
     function copyDiscord() {
       navigator.clipboard.writeText("tom1kat");
       alert("✨ discord username copied");
