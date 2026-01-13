@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>tomika.net</title>
 
-  <!-- fuente simple y limpia -->
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
   <style>
@@ -16,18 +15,23 @@
       font-family: "Inter", sans-serif;
     }
 
-    /* título arriba */
     header {
       text-align: center;
-      padding: 30px;
-      font-size: 1.5rem;
+      padding: 30px 20px 10px;
       letter-spacing: 4px;
-      opacity: 0.8;
+      font-size: 1.4rem;
+      opacity: 0.85;
     }
 
-    /* centro de la página */
+    .divider {
+      width: 60%;
+      margin: 0 auto;
+      border-top: 1px solid #222;
+      opacity: 0.6;
+    }
+
     main {
-      height: calc(100vh - 120px);
+      height: calc(100vh - 160px);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -35,37 +39,39 @@
 
     .buttons {
       display: flex;
-      gap: 20px;
+      gap: 18px;
     }
 
     .buttons a {
       text-decoration: none;
       color: whitesmoke;
       border: 1px solid #333;
-      padding: 12px 20px;
+      padding: 8px 14px;
       border-radius: 6px;
-      transition: all ease;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      transition: all 0.3s ease;
     }
 
     .buttons a:hover {
-      background: #111;
+      transform: translateY(-4px);
       border-color: #666;
+      background: #111;
+      opacity: 1;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- título superior -->
-  <header>
-    tomika.net
-  </header>
+  <header>tomika.net</header>
 
-  <!-- botones centrales -->
+  <div class="divider"></div>
+
   <main>
     <div class="buttons">
       <a href="https://instagram.com/tomikavk" target="_blank">Instagram</a>
-      <a href="https://x.com/TomikaAkaStr1ke" target="_blank">X / Twitter</a>
+      <a href="https://twitter.com/TomikaAkaStr1ke" target="_blank">X / Twitter</a>
       <a href="https://github.com/tomikavamp" target="_blank">GitHub</a>
     </div>
   </main>
