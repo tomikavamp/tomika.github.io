@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>tomika</title>
+  <title>Tomika</title>
 
   <style>
     @font-face {
@@ -20,7 +20,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
     }
 
     h1 {
@@ -28,7 +27,8 @@
       font-size: 4rem;
       letter-spacing: 8px;
       transform: skew(-6deg);
-      margin-bottom: 25px;
+      margin-top: 120px;
+      margin-bottom: 20px;
     }
 
     .divider {
@@ -41,6 +41,7 @@
     .buttons {
       display: flex;
       gap: 22px;
+      margin-bottom: 60px;
     }
 
     .btn {
@@ -50,7 +51,9 @@
       padding: 12px 20px;
       border-radius: 10px;
       font-size: 0.9rem;
+      cursor: pointer;
       transition: all 0.25s ease;
+      background: transparent;
     }
 
     .btn:hover {
@@ -58,12 +61,29 @@
       border-color: #aaa;
       background: #111;
     }
+
+    .footer {
+      margin-top: auto;
+      margin-bottom: 40px;
+      display: flex;
+      gap: 14px;
+    }
+
+    .small-btn {
+      font-size: 0.75rem;
+      padding: 8px 14px;
+      opacity: 0.85;
+    }
+
+    .small-btn:hover {
+      opacity: 1;
+    }
   </style>
 </head>
 
 <body>
 
-  <h1>tomika</h1>
+  <h1>Tomika</h1>
 
   <div class="divider"></div>
 
@@ -72,6 +92,18 @@
     <a class="btn" href="https://x.com/TomikaAkaStr1ke" target="_blank">X</a>
     <a class="btn" href="https://github.com/tomikavamp" target="_blank">GitHub</a>
   </div>
+
+  <div class="footer">
+    <a class="btn small-btn" href="https://steamcommunity.com/id/tomikavamp/" target="_blank">Steam</a>
+    <button class="btn small-btn" onclick="copyDiscord()">Discord</button>
+  </div>
+
+  <script>
+    function copyDiscord() {
+      navigator.clipboard.writeText("tom1kat");
+      alert("✨ discord username copied");
+    }
+  </script>
 
 </body>
 </html>
