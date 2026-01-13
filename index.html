@@ -2,32 +2,73 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>tomika</title>
+  <title>tomika.net</title>
+
+  <!-- fuente simple y limpia -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       background: radial-gradient(circle at top, #111, #000);
-      color: #e6e6e6;
-      font-family: monospace;
+      color: whitesmoke;
+      font-family: "Inter", sans-serif;
+    }
+
+    /* título arriba */
+    header {
+      text-align: center;
+      padding: 30px;
+      font-size: 1.5rem;
+      letter-spacing: 4px;
+      opacity: 0.8;
+    }
+
+    /* centro de la página */
+    main {
+      height: calc(100vh - 120px);
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    h1 {
-      font-size: 3rem;
-      letter-spacing: 4px;
-      opacity: 0;
-      animation: fadeIn 2s forwards;
+    .buttons {
+      display: flex;
+      gap: 20px;
     }
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    .buttons a {
+      text-decoration: none;
+      color: whitesmoke;
+      border: 1px solid #333;
+      padding: 12px 20px;
+      border-radius: 6px;
+      transition: all ease;
+    }
+
+    .buttons a:hover {
+      background: #111;
+      border-color: #666;
     }
   </style>
 </head>
+
 <body>
-  <h1>tomika.net</h1>
+
+  <!-- título superior -->
+  <header>
+    tomika.net
+  </header>
+
+  <!-- botones centrales -->
+  <main>
+    <div class="buttons">
+      <a href="https://instagram.com/tomikavk" target="_blank">Instagram</a>
+      <a href="https://x.com/TomikaAkaStr1ke" target="_blank">X / Twitter</a>
+      <a href="https://github.com/tomikavamp" target="_blank">GitHub</a>
+    </div>
+  </main>
+
 </body>
 </html>
